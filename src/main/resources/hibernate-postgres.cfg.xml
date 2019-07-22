@@ -7,8 +7,8 @@
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <property name="connection.url">jdbc:postgres://triyhuvl:PV6DmnTBSIKx7hhlbEGIsN216yPByoy8@raja.db.elephantsql.com:5432/triyhuvl
         </property>
-        <property name="connection.username">jjiairnv</property>
-        <property name="connection.password">wyp94zvMfQWf1Vq2r-xUH2I5E88HFG_p</property>
+        <property name="connection.username">triyhuvl</property>
+        <property name="connection.password">PV6DmnTBSIKx7hhlbEGIsN216yPByoy8</property>
         <property name="connection.autocommit">true</property>
         <property name="current_session_context_class">thread</property>
         <property name="show_sql">true</property>
