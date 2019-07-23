@@ -489,7 +489,7 @@ public class BienControlleur extends BaseController {
     @POST
     @Path("/typeBien")
     @Produces(MediaType.APPLICATION_JSON)
-    @Consumes({MediaType.MULTIPART_FORM_DATA})
+    @Consumes({MediaType.APPLICATION_JSON})
     public  Response addtypeBIen( Typebien typebien){
             if(typebien.getLibelle().trim().equals("")){
                 return sendError(200, ALL_FIELD_REQUIRE);
