@@ -29,6 +29,19 @@ public class UserController extends BaseController{
 
     }
 
+    /**
+     *
+     * @param user
+     * @return
+     * {
+     * 	"nom":"sonko",
+     * 	"prenom":"abdoulaye",
+     * 	"email":"abdoulaye@gmail.com",
+     * 	"username":"admin",
+     * 	"password":"admin"
+     * }
+     */
+
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
