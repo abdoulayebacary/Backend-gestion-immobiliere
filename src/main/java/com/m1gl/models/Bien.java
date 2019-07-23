@@ -122,9 +122,9 @@ public class Bien implements Serializable {
         this.photoList = photoList;
     }*/
 
-    public List<Photo> getPhotoList() {
-        return photoList;
-    }
+//    public List<Photo> getPhotoList() {
+//        return photoList;
+//    }
 
     public void setPhotoList(List<Photo> photoList) {
         this.photoList = photoList;
