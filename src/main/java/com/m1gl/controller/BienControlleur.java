@@ -267,6 +267,14 @@ public class BienControlleur extends BaseController {
     /**
      * @param bailleur le bailleur qu'on veut ajouter
      * @return succes et le bailleur créé si tout est ok et error en cas de problème
+     * {
+     * 	"adresse":"sicap",
+     * 	"email":"sicp@sicap.com",
+     * 	"numeroPiece":"2344",
+     * 	"telephone":"232323",
+     * 	"bailleurNom":"moussa"
+     *
+     * }
      */
 
     @POST
@@ -476,6 +484,31 @@ public class BienControlleur extends BaseController {
             return sendError(404, "Photo non trouvé, impossible de faire une suppression");
         }
     }
+
+
+    @POST
+    @Path("/typeBien")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes({MediaType.MULTIPART_FORM_DATA})
+    public  Response addtypeBIen( Typebien typebien){
+            if(typebien.getLibelle().trim().equals("")){
+                return sendError(200, ALL_FIELD_REQUIRE);
+            }
+
+            try {
+                Typebien typebien1 = new Typebien();
+                typebien1.setLibelle(typebien.getLibelle());
+                if(ibiens.setTypeBien(typebien1)){
+                    return sendSuccess("type bine enregistré avec success!", typebien1);
+                }else{
+                    return sendError(200, "type bien  non supprimer!");
+                }
+            }catch (Exception e)
+            {
+                return sendError(500, ERROR_SERVER);
+            }
+    }
+
 
 
 

@@ -46,4 +46,5 @@ public interface IBienServices {
 
     List<Typebien> allTypeBien();
 
+    boolean setTypeBien(Typebien typebien);
 }
