@@ -234,4 +234,18 @@ public class BienDAO implements IBienServices {
             return new ArrayList<>();
         }
     }
+
+    @Override
+    public boolean setTypeBien(Typebien typebien) {
+        try{
+            session.beginTransaction();
+            session.save(typebien);
+            session.getTransaction().commit();
+            return true;
+        }catch (Exception ex){
+            session.getTransaction().rollback();
+            ex.printStackTrace();
+            return false;
+        }
+    }
 }
